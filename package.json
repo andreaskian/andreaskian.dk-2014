@@ -1,5 +1,8 @@
 {
   "name": "personal-website",
   "version": "1.0.1",
-  "author": "Andreas Krohn"
+  "author": "Andreas Krohn",
+  "devDependencies": {
+    "gulp": "~3.5.2"
+  }
 }
