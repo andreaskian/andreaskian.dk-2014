@@ -1,9 +1,9 @@
-var logo = Snap.select('#personal-logo').attr({ opacity: 0 });
+var logo = Snap.select('#logo').attr({ opacity: 0 });
 
 window.onload = function () {
 
     var parts      = [
-            ['circle', 0, 20],
+            ['circle', 0, 170],
             ['right', -5, 0],
             ['left', 5, 0],
             ['combined', 0, 0]
@@ -27,6 +27,10 @@ window.onload = function () {
 
     }
 
+    logo.attr({ opacity: 1 });
+
+    setTimeout(animateLogo, 100);
+
     function animateLogo() {
 
         if (!components[k]) {
@@ -42,9 +46,5 @@ window.onload = function () {
         k++;
 
     }
-
-    logo.attr({ opacity: 1 });
-
-    setTimeout(animateLogo, 100);
 
 };

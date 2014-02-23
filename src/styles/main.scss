@@ -1,6 +1,28 @@
-#personal-logo {
-    position: absolute;
+$logo-dimensions: 130px, 130px;
+
+#logo {
     left: 50%;
-    top: 50%;
-    margin: -75px 0 0 -125px;
+    margin-top: -(nth($logo-dimensions, 2)/2);
+    margin-left: -(nth($logo-dimensions, 1)/2);
+    position: absolute;
+    top: 40%;
+}
+
+h1 {
+    font: {
+        family: sans-serif;
+        weight: 100;
+    };
+    margin: (nth($logo-dimensions, 2)/1.5) 0 0 0;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    width: 100%;
+    opacity: 0;
+    animation: animateName 1s linear 1s 1 forwards;
+}
+
+@keyframes animateName {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
